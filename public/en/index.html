@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="description" content="Build a 2 to 8 color palette, edit HEX, RGB, or HSL values, and check text contrast between opaque sRGB colors.">
+    <meta name="theme-color" content="#f3f0e8">
+    <title>Color Palette and Text Contrast | GlossQuote Labs</title>
+    <link rel="alternate" hreflang="zh-Hant" href="../index.html">
+    <link rel="alternate" hreflang="en" href="./index.html">
+    <link rel="stylesheet" href="../styles/tokens.css">
+    <link rel="stylesheet" href="../styles/app.css">
+    <script type="module" src="../js/app.mjs"></script>
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="https://glossquote.com/en/index.html">Gloss Tools</a>
+      <nav class="topbar-links" aria-label="Page links">
+        <a href="https://glossquote.com/en/index.html">GlossQuote home</a>
+        <span class="language-reset-note">Changing languages resets unsaved edits.</span>
+        <a href="../index.html">繁體中文</a>
+      </nav>
+    </header>
+    <main class="page">
+      <header class="page-heading">
+        <p class="product-name">Gloss Tools / Color palette</p>
+        <h1>Color palette and text contrast</h1>
+        <p class="page-lede">Arrange colors by hand, edit committed values, and compare text and background contrast.</p>
+      </header>
+      <section id="palette-app" class="palette-app" data-locale="en" aria-label="Color palette tool">
+        <div class="js-fallback">
+          <h2>JavaScript is required for interactive features</h2>
+          <p>Enable JavaScript to edit colors, calculate contrast, copy a value, or download CSS. Nothing is saved automatically.</p>
+          <div class="fallback-actions">
+            <button type="button" disabled>Add color</button>
+            <button type="button" disabled>Copy selected color</button>
+          </div>
+        </div>
+      </section>
+      <section class="information-section" id="about">
+        <h2>How to use this tool</h2>
+        <p>Manually arrange 2 to 8 opaque sRGB colors in HEX, RGB, or HSL. Choose a text and background color to check their WCAG contrast ratio. Calculations run in this page's memory.</p>
+        <p>No account is needed. After the page loads, color calculations run locally. The tool does not write colors to storage, the URL, or a server. Refreshing, resetting, or changing languages clears this page's drafts and palette; save downloads yourself. Reset cannot clear text already copied to the operating system clipboard.</p>
+      </section>
+      <section class="information-section" id="faq">
+        <h2>Frequently asked questions</h2>
+        <details>
+          <summary>Does passing the contrast check make my website accessible?</summary>
+          <p>No. It only reports whether these two opaque colors meet the listed text contrast thresholds. Type size, focus, keyboard use, and other page content still need separate review.</p>
+        </details>
+        <details>
+          <summary>Does the tool support transparency or gradients?</summary>
+          <p>It supports opaque sRGB only. Transparency and gradients depend on background and position, so this version does not calculate them.</p>
+        </details>
+        <details>
+          <summary>Why can HSL convert back with a small difference?</summary>
+          <p>Colors are stored as 8-bit RGB. HSL input becomes integer RGB when committed, so intermediate values are not always reversible.</p>
+        </details>
+        <details>
+          <summary>Will my palette be saved?</summary>
+          <p>No. Refreshing, resetting, or changing languages starts a fresh page. Copy color codes or download CSS if you need to keep them.</p>
+        </details>
+        <details>
+          <summary>Can I extract colors from a photo?</summary>
+          <p>No. The first version is for manual color selection and does not read images.</p>
+        </details>
+      </section>
+    </main>
+    <footer class="footer">
+      <p>GlossQuote Labs · Colors stay in this page's memory.</p>
+    </footer>
+  </body>
+</html>

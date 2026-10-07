@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="description" content="手動整理 2 至 8 色色票，轉換 HEX、RGB、HSL，檢查不透明 sRGB 文字與背景的對比值。">
+    <meta name="theme-color" content="#f3f0e8">
+    <title>配色工具與文字對比檢查｜GlossQuote Labs</title>
+    <link rel="alternate" hreflang="en" href="./en/index.html">
+    <link rel="alternate" hreflang="zh-Hant" href="./index.html">
+    <link rel="stylesheet" href="./styles/tokens.css">
+    <link rel="stylesheet" href="./styles/app.css">
+    <script type="module" src="./js/app.mjs"></script>
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="https://glossquote.com/index.html">Gloss Tools</a>
+      <nav class="topbar-links" aria-label="頁面連結">
+        <a href="https://glossquote.com/index.html">GlossQuote 首頁</a>
+        <span class="language-reset-note">切換語言會重設未保存資料</span>
+        <a href="./en/index.html">English</a>
+      </nav>
+    </header>
+    <main class="page">
+      <header class="page-heading">
+        <p class="product-name">Gloss Tools / 配色</p>
+        <h1>配色與文字對比</h1>
+        <p class="page-lede">手動整理顏色、提交有效色碼，再比較文字色與背景色的對比。</p>
+      </header>
+      <section id="palette-app" class="palette-app" data-locale="zh-Hant" aria-label="配色工具">
+        <div class="js-fallback">
+          <h2>互動功能需要 JavaScript</h2>
+          <p>啟用 JavaScript 後才能編輯顏色、計算對比、複製或下載 CSS。資料不會自動保存。</p>
+          <div class="fallback-actions">
+            <button type="button" disabled>新增白色</button>
+            <button type="button" disabled>複製所選色碼</button>
+          </div>
+        </div>
+      </section>
+      <section class="information-section" id="about">
+        <h2>使用方式與範圍</h2>
+        <p>手動整理 2 至 8 個不透明 sRGB 顏色，使用 HEX、RGB 或 HSL 編輯；選擇文字色與背景色後查看 WCAG 對比比值。所有計算都在這個頁面的記憶體中完成。</p>
+        <p>不需要帳號。頁面載入後，色彩計算都在本機完成。工具不會把色彩寫入儲存空間、網址或伺服器。重整、重設或切換語言會清除本頁的草稿和色票；下載檔案由你自行保存。重設不會清除已複製到作業系統的文字。</p>
+      </section>
+      <section class="information-section" id="faq">
+        <h2>常見問題</h2>
+        <details>
+          <summary>通過對比檢查就代表網站無障礙嗎？</summary>
+          <p>不代表。結果只說明這兩個不透明色彩是否達到所列文字對比門檻；字級、焦點、鍵盤操作及其他頁面內容仍要另外檢查。</p>
+        </details>
+        <details>
+          <summary>支援透明色或漸層嗎？</summary>
+          <p>目前只支援不透明 sRGB。透明與漸層會受背景和位置影響，這個版本不計算它們。</p>
+        </details>
+        <details>
+          <summary>為什麼 HSL 換回去有微小差異？</summary>
+          <p>工具以 8-bit RGB 保存顏色。HSL 輸入會在提交時轉成整數 RGB，因此中間數值不一定完全可逆。</p>
+        </details>
+        <details>
+          <summary>色票會保存嗎？</summary>
+          <p>不會。重整、重設或切換語言後會回到新頁面的起始色票。需要保留時，請自行複製色碼或下載 CSS。</p>
+        </details>
+        <details>
+          <summary>可以從照片擷取配色嗎？</summary>
+          <p>不可以。第一版只提供手動選色，不讀取圖片。</p>
+        </details>
+      </section>
+    </main>
+    <footer class="footer">
+      <p>GlossQuote Labs · 顏色只留在目前頁面記憶體中。</p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,33 @@
+{
+  "name": "glossquote-color-palette",
+  "compatibility_date": "2026-10-07",
+  "workers_dev": false,
+  "preview_urls": false,
+  "send_metrics": false,
+  "dependencies_instrumentation": {
+    "enabled": false
+  },
+  "build": {
+    "command": "node scripts/build.mjs --production --cloudflare --site-url https://colors.glossquote.com/ && node scripts/check.mjs --production --cloudflare --site-url https://colors.glossquote.com/",
+    "cwd": "."
+  },
+  "assets": {
+    "directory": "./dist",
+    "html_handling": "none",
+    "not_found_handling": "none"
+  },
+  "route": {
+    "pattern": "colors.glossquote.com",
+    "custom_domain": true
+  },
+  "observability": {
+    "enabled": false,
+    "logs": {
+      "enabled": false,
+      "invocation_logs": false
+    },
+    "traces": {
+      "enabled": false
+    }
+  }
+}
