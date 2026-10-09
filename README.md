@@ -32,10 +32,10 @@ npm.cmd run build -- --production --cloudflare --site-url https://colors.glossqu
 npm.cmd run check -- --production --cloudflare --site-url https://colors.glossquote.com/
 ```
 
-`wrangler.jsonc` 設定僅提供靜態資產的 Cloudflare 站點，部署前會執行正式建置與精確產物檢查。目前候選網域尚未部署及完成線上驗證；本機正式建置不代表網站已上線或搜尋引擎已收錄。
+`wrangler.jsonc` 設定僅提供靜態資產的 Cloudflare 站點，部署前會執行正式建置與精確產物檢查。2026-10-09 已正式上線：[繁體中文](https://colors.glossquote.com/index.html) · [English](https://colors.glossquote.com/en/index.html)。36 項正式 HTTPS 檢查通過，13 個公開資產與審查過的建置逐位元組相同；雙語首頁已列出本工具。搜尋引擎是否收錄仍未確認。
 
-`wrangler.jsonc` describes a static-assets-only Cloudflare configuration. Its build command runs both the production build and exact output check. The candidate domain has not been deployed or verified live; a local production build does not establish publication or search indexing.
+`wrangler.jsonc` describes a static-assets-only Cloudflare configuration. Its build command runs both the production build and exact output check. Live hosting was verified on 2026-10-09: 36 HTTPS checks passed and all 13 public assets match the reviewed build. Both languages are listed on the GlossQuote homepage. Search-engine indexing remains unverified.
 
-人工待驗項仍包括實際剪貼簿拒絕提示、全站停用 JavaScript、BFCache 邊界、螢幕閱讀器、真正 200% 瀏覽器縮放、作業系統減少動態效果設定、其他瀏覽器與實體裝置，以及正式網域和搜尋收錄。這些狀態會保持 NOT_RUN，直到實際驗證。
+人工待驗項仍包括實際剪貼簿拒絕提示、全站停用 JavaScript、BFCache 邊界、螢幕閱讀器、真正 200% 瀏覽器縮放、作業系統減少動態效果設定、其他瀏覽器與實體裝置，以及搜尋收錄。這些狀態會保持 NOT_RUN，直到實際驗證。
 
-Manual NOT_RUN items include a real clipboard permission rejection, globally disabled JavaScript, BFCache edge behavior, screen-reader use, true 200% browser zoom, the OS reduced-motion setting, other browsers and physical devices, and the live domain and search indexing. They remain NOT_RUN until directly verified.
+Manual NOT_RUN items include a real clipboard permission rejection, globally disabled JavaScript, BFCache edge behavior, screen-reader use, true 200% browser zoom, the OS reduced-motion setting, other browsers and physical devices, and search indexing. They remain NOT_RUN until directly verified.
